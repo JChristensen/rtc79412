@@ -89,6 +89,12 @@
 <layer number="208" name="208bmp" color="9" fill="10" visible="yes" active="yes"/>
 <layer number="209" name="209bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="210" name="210bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="211" name="211bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="212" name="212bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="213" name="213bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="214" name="214bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="215" name="215bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="216" name="216bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="250" name="Descript" color="7" fill="1" visible="no" active="no"/>
 <layer number="251" name="SMDround" color="7" fill="1" visible="no" active="no"/>
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
@@ -6568,6 +6574,11 @@ http://www.zetex.com&lt;p&gt;
 <sheets>
 <sheet>
 <plain>
+<text x="10.16" y="15.24" size="2.1844" layer="91" ratio="10">MCP79412 Breakout Board by Jack Christensen is licensed under</text>
+<text x="10.16" y="20.32" size="4.572" layer="91" ratio="12">CC BY-SA</text>
+<text x="10.16" y="10.16" size="2.1844" layer="91" ratio="10">a Creative Commons Attribution-ShareAlike 3.0 Unported License.</text>
+<text x="149.86" y="30.48" size="3.048" layer="91" ratio="12">MCP79412 Breakout Board</text>
+<text x="149.86" y="25.4" size="3.048" layer="91" ratio="12">Jack Christensen</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
