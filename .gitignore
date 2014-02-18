@@ -13,6 +13,7 @@
 *.gpi
 *.dri
 *.xln
+*.gko
 
 #Eagle files
 *.epf
