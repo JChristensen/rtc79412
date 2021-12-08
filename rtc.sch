@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -57,6 +58,7 @@
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="99" name="SpiceOrder" color="5" fill="1" visible="no" active="no"/>
 <layer number="100" name="Muster" color="7" fill="1" visible="no" active="no"/>
 <layer number="101" name="Patch_Top" color="12" fill="4" visible="yes" active="yes"/>
 <layer number="102" name="Vscore" color="7" fill="1" visible="yes" active="yes"/>
@@ -195,8 +197,8 @@ body 3.9 mm/JEDEC MS-012AA</description>
 <smd name="8" x="-1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
 <smd name="6" x="0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
 <smd name="5" x="1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
-<text x="-3.175" y="-1.905" size="1.016" layer="25" ratio="10" rot="R90">&gt;NAME</text>
-<text x="4.445" y="-1.905" size="1.016" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+<text x="-3.175" y="-1.905" size="0.8128" layer="25" ratio="16" rot="R90">&gt;NAME</text>
+<text x="4.445" y="-1.905" size="0.8128" layer="27" ratio="16" rot="R90">&gt;VALUE</text>
 <rectangle x1="-2.1501" y1="-3.1001" x2="-1.6599" y2="-2" layer="51"/>
 <rectangle x1="-0.8801" y1="-3.1001" x2="-0.3899" y2="-2" layer="51"/>
 <rectangle x1="0.3899" y1="-3.1001" x2="0.8801" y2="-2" layer="51"/>
@@ -205,6 +207,7 @@ body 3.9 mm/JEDEC MS-012AA</description>
 <rectangle x1="0.3899" y1="2" x2="0.8801" y2="3.1001" layer="51"/>
 <rectangle x1="-0.8801" y1="2" x2="-0.3899" y2="3.1001" layer="51"/>
 <rectangle x1="-2.1501" y1="2" x2="-1.6599" y2="3.1001" layer="51"/>
+<circle x="-1.651" y="-0.508" radius="0.3048" width="0.3048" layer="21"/>
 <circle x="-1.651" y="-0.508" radius="0.3048" width="0.3048" layer="21"/>
 </package>
 <package name="CRYSTAL-CITIZEN-CM2XXC">
@@ -220,8 +223,8 @@ body 3.9 mm/JEDEC MS-012AA</description>
 <circle x="3" y="0" radius="0.291546875" width="0.254" layer="21"/>
 <smd name="P$3" x="2.75" y="1.6" dx="1.3" dy="1.9" layer="1"/>
 <smd name="P$4" x="-2.75" y="1.6" dx="1.3" dy="1.9" layer="1"/>
-<text x="-2" y="3" size="1.016" layer="21">&gt;NAME</text>
-<text x="-2.5" y="-4" size="1.016" layer="21">&gt;VALUE</text>
+<text x="-2" y="3" size="1.016" layer="25" ratio="16">&gt;NAME</text>
+<text x="-2.5" y="-4" size="1.016" layer="27" ratio="16">&gt;VALUE</text>
 </package>
 <package name="SOD-323F">
 <wire x1="-0.85" y1="0.65" x2="0.85" y2="0.65" width="0.127" layer="21"/>
@@ -239,9 +242,13 @@ body 3.9 mm/JEDEC MS-012AA</description>
 <wire x1="1.2" y1="-0.2" x2="0.9" y2="-0.2" width="0.127" layer="51"/>
 <smd name="A" x="-1.1176" y="0" dx="1.27" dy="0.8128" layer="1"/>
 <smd name="K" x="1.1176" y="0" dx="1.27" dy="0.8128" layer="1"/>
-<text x="-1.8" y="0.9" size="0.8128" layer="25" font="vector">&gt;NAME</text>
-<text x="-2.1" y="-1.7" size="0.8128" layer="27" font="vector">&gt;VALUE</text>
-<circle x="1.27" y="-1.27" radius="0.3048" width="0.3048" layer="21"/>
+<text x="-1.8" y="0.9" size="0.8128" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<text x="-2.1" y="-1.7" size="0.8128" layer="27" font="vector" ratio="16">&gt;VALUE</text>
+<wire x1="0.381" y1="-1.778" x2="0.381" y2="-1.397" width="0.2032" layer="21"/>
+<wire x1="0.381" y1="-1.397" x2="0.381" y2="-1.016" width="0.2032" layer="21"/>
+<wire x1="-0.381" y1="-1.778" x2="-0.381" y2="-1.016" width="0.2032" layer="21"/>
+<wire x1="-0.381" y1="-1.016" x2="0.381" y2="-1.397" width="0.2032" layer="21"/>
+<wire x1="0.381" y1="-1.397" x2="-0.381" y2="-1.778" width="0.2032" layer="21"/>
 </package>
 <package name="1N400X">
 <wire x1="-2.54" y1="1.27" x2="2.54" y2="1.27" width="0.127" layer="21"/>
@@ -282,8 +289,8 @@ body 3.9 mm/JEDEC MS-012AA</description>
 <wire x1="-10.668" y1="5.08" x2="-10.668" y2="-5.08" width="0.127" layer="21"/>
 <wire x1="-10.668" y1="-5.08" x2="-8.128" y2="-7.62" width="0.127" layer="21"/>
 <wire x1="-5.08" y1="-7.62" x2="5.08" y2="-7.62" width="0.127" layer="21" curve="-90"/>
-<text x="-2.54" y="3.81" size="1.27" layer="21">&gt;NAME</text>
-<text x="-2.54" y="-11.43" size="1.27" layer="21">&gt;VALUE</text>
+<text x="-2.54" y="3.81" size="1.27" layer="21" ratio="16">&gt;NAME</text>
+<text x="-2.54" y="-11.43" size="1.27" layer="21" ratio="16">&gt;VALUE</text>
 <wire x1="-5.08" y1="-7.62" x2="-8.128" y2="-7.62" width="0.127" layer="21" curve="-81.202589"/>
 <wire x1="8.128" y1="-7.62" x2="5.08" y2="-7.62" width="0.127" layer="21" curve="-81.202589"/>
 </package>
@@ -298,8 +305,8 @@ MELF 0.10 W</description>
 <wire x1="0.7112" y1="-0.635" x2="-0.7112" y2="-0.635" width="0.1524" layer="51"/>
 <smd name="1" x="-0.95" y="0" dx="1.3" dy="1.6" layer="1"/>
 <smd name="2" x="0.95" y="0" dx="1.3" dy="1.6" layer="1"/>
-<text x="-1.5" y="1.5" size="0.8128" layer="25" ratio="10">&gt;NAME</text>
-<text x="-1.5" y="-2.5" size="0.8128" layer="27" ratio="10">&gt;VALUE</text>
+<text x="-1.5" y="1.5" size="0.8128" layer="25" ratio="16">&gt;NAME</text>
+<text x="-1.5" y="-2.5" size="0.8128" layer="27" ratio="16">&gt;VALUE</text>
 <rectangle x1="-1.0414" y1="-0.7112" x2="-0.6858" y2="0.7112" layer="51"/>
 <rectangle x1="0.6858" y1="-0.7112" x2="1.0414" y2="0.7112" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.5999" x2="0.1999" y2="0.5999" layer="35"/>
@@ -704,23 +711,6 @@ chip, wave soldering</description>
 <rectangle x1="-3.2004" y1="-1.5494" x2="-2.3505" y2="1.5507" layer="51"/>
 <rectangle x1="2.3622" y1="-1.5494" x2="3.2121" y2="1.5507" layer="51"/>
 <rectangle x1="-0.5001" y1="-1" x2="0.5001" y2="1" layer="35"/>
-</package>
-<package name="M1206">
-<description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
-MELF 0.25 W</description>
-<wire x1="-2.473" y1="1.483" x2="2.473" y2="1.483" width="0.0508" layer="39"/>
-<wire x1="2.473" y1="-1.483" x2="-2.473" y2="-1.483" width="0.0508" layer="39"/>
-<wire x1="-2.473" y1="-1.483" x2="-2.473" y2="1.483" width="0.0508" layer="39"/>
-<wire x1="2.473" y1="1.483" x2="2.473" y2="-1.483" width="0.0508" layer="39"/>
-<wire x1="1.143" y1="0.8382" x2="-1.143" y2="0.8382" width="0.1524" layer="51"/>
-<wire x1="1.143" y1="-0.8382" x2="-1.143" y2="-0.8382" width="0.1524" layer="51"/>
-<smd name="1" x="-1.4" y="0" dx="1.6" dy="2" layer="1"/>
-<smd name="2" x="1.4" y="0" dx="1.6" dy="2" layer="1"/>
-<text x="-1.27" y="1.27" size="1.27" layer="25">&gt;NAME</text>
-<text x="-1.27" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-1.7018" y1="-0.9144" x2="-1.1176" y2="0.9144" layer="51"/>
-<rectangle x1="1.1176" y1="-0.9144" x2="1.7018" y2="0.9144" layer="51"/>
-<rectangle x1="-0.3" y1="-0.8001" x2="0.3" y2="0.8001" layer="35"/>
 </package>
 <package name="M1406">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
@@ -3215,6 +3205,93 @@ Panasonic # ECQ-E2224KF, Digi-Key #EF2224-ND, Mouser #667-ECQ-E2224KF</descripti
 <text x="-3" y="0.5" size="1.27" layer="25">&gt;NAME</text>
 <text x="-3.5" y="-1.5" size="1.27" layer="27">&gt;VALUE</text>
 </package>
+<package name="MSOP8">
+<description>&lt;b&gt;Micro Small Outline Package&lt;/b&gt; Grid 0.65mm&lt;p&gt;
+Source: http://ww1.microchip.com/downloads/en/DeviceDoc/21796H.pdf</description>
+<wire x1="-1.4" y1="1.4" x2="1.4" y2="1.4" width="0.2032" layer="21"/>
+<wire x1="1.4" y1="1.4" x2="1.4" y2="-1.4" width="0.2032" layer="21"/>
+<wire x1="1.4" y1="-1.4" x2="-1.4" y2="-1.4" width="0.2032" layer="21"/>
+<wire x1="-1.4" y1="-1.4" x2="-1.4" y2="1.4" width="0.2032" layer="21"/>
+<circle x="-1" y="-1" radius="0.2" width="0" layer="21"/>
+<smd name="1" x="-0.975" y="-2.05" dx="0.45" dy="1" layer="1" stop="no"/>
+<smd name="2" x="-0.325" y="-2.05" dx="0.45" dy="1" layer="1" stop="no"/>
+<smd name="3" x="0.325" y="-2.05" dx="0.45" dy="1" layer="1" stop="no"/>
+<smd name="4" x="0.975" y="-2.05" dx="0.45" dy="1" layer="1" stop="no"/>
+<smd name="5" x="0.975" y="2.05" dx="0.45" dy="1" layer="1" stop="no"/>
+<smd name="6" x="0.325" y="2.05" dx="0.45" dy="1" layer="1" stop="no"/>
+<smd name="7" x="-0.325" y="2.05" dx="0.45" dy="1" layer="1" stop="no"/>
+<smd name="8" x="-0.975" y="2.05" dx="0.45" dy="1" layer="1" stop="no"/>
+<text x="-1.905" y="-1.905" size="0.8128" layer="25" ratio="16" rot="R90">&gt;NAME</text>
+<text x="2.54" y="-1.905" size="0.8128" layer="27" ratio="16" rot="R90">&gt;VALUE</text>
+<rectangle x1="-1.1254" y1="-2.45" x2="-0.8254" y2="-1.5" layer="51"/>
+<rectangle x1="-0.4751" y1="-2.45" x2="-0.1751" y2="-1.5" layer="51"/>
+<rectangle x1="0.1751" y1="-2.45" x2="0.4751" y2="-1.5" layer="51"/>
+<rectangle x1="0.8253" y1="-2.45" x2="1.1253" y2="-1.5" layer="51"/>
+<rectangle x1="0.8254" y1="1.5" x2="1.1254" y2="2.45" layer="51"/>
+<rectangle x1="0.1751" y1="1.5" x2="0.4751" y2="2.45" layer="51"/>
+<rectangle x1="-0.4751" y1="1.5" x2="-0.1751" y2="2.45" layer="51"/>
+<rectangle x1="-1.1253" y1="1.5" x2="-0.8253" y2="2.45" layer="51"/>
+<rectangle x1="-1.225" y1="-2.6" x2="-0.725" y2="-1.525" layer="29"/>
+<rectangle x1="-0.575" y1="-2.6" x2="-0.075" y2="-1.525" layer="29"/>
+<rectangle x1="0.075" y1="-2.6" x2="0.575" y2="-1.525" layer="29"/>
+<rectangle x1="0.725" y1="-2.6" x2="1.225" y2="-1.525" layer="29"/>
+<rectangle x1="0.725" y1="1.525" x2="1.225" y2="2.6" layer="29" rot="R180"/>
+<rectangle x1="0.075" y1="1.525" x2="0.575" y2="2.6" layer="29" rot="R180"/>
+<rectangle x1="-0.575" y1="1.525" x2="-0.075" y2="2.6" layer="29" rot="R180"/>
+<rectangle x1="-1.225" y1="1.525" x2="-0.725" y2="2.6" layer="29" rot="R180"/>
+</package>
+<package name="SOD-323F-A">
+<wire x1="-0.85" y1="0.65" x2="0.85" y2="0.65" width="0.127" layer="21"/>
+<wire x1="0.85" y1="0.65" x2="0.85" y2="-0.65" width="0.127" layer="21"/>
+<wire x1="0.85" y1="-0.65" x2="-0.85" y2="-0.65" width="0.127" layer="21"/>
+<wire x1="-0.85" y1="-0.65" x2="-0.85" y2="0.65" width="0.127" layer="21"/>
+<wire x1="0.4" y1="0.6" x2="0.4" y2="-0.6" width="0.127" layer="21"/>
+<wire x1="0.4" y1="-0.6" x2="0.3" y2="-0.6" width="0.127" layer="21"/>
+<wire x1="0.3" y1="-0.6" x2="0.3" y2="0.6" width="0.127" layer="21"/>
+<wire x1="-0.9" y1="0.2" x2="-1.2" y2="0.2" width="0.127" layer="51"/>
+<wire x1="-1.2" y1="0.2" x2="-1.2" y2="-0.2" width="0.127" layer="51"/>
+<wire x1="-1.2" y1="-0.2" x2="-0.9" y2="-0.2" width="0.127" layer="51"/>
+<wire x1="0.9" y1="0.2" x2="1.2" y2="0.2" width="0.127" layer="51"/>
+<wire x1="1.2" y1="0.2" x2="1.2" y2="-0.2" width="0.127" layer="51"/>
+<wire x1="1.2" y1="-0.2" x2="0.9" y2="-0.2" width="0.127" layer="51"/>
+<smd name="A" x="-1.1176" y="0" dx="1.27" dy="0.8128" layer="1"/>
+<smd name="K" x="1.1176" y="0" dx="1.27" dy="0.8128" layer="1"/>
+<text x="-1.8" y="0.9" size="0.8128" layer="25" font="vector" ratio="10">&gt;NAME</text>
+<text x="-2.1" y="-1.7" size="0.8128" layer="27" font="vector" ratio="10">&gt;VALUE</text>
+<wire x1="0.381" y1="0.889" x2="0.381" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="0.381" y1="1.27" x2="0.381" y2="1.651" width="0.2032" layer="21"/>
+<wire x1="-0.381" y1="0.889" x2="-0.381" y2="1.651" width="0.2032" layer="21"/>
+<wire x1="-0.381" y1="1.651" x2="0.381" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="0.381" y1="1.27" x2="-0.381" y2="0.889" width="0.2032" layer="21"/>
+</package>
+<package name="M1206">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
+MELF 0.25 W</description>
+<wire x1="-2.473" y1="1.483" x2="2.473" y2="1.483" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="-1.483" x2="-2.473" y2="-1.483" width="0.0508" layer="39"/>
+<wire x1="-2.473" y1="-1.483" x2="-2.473" y2="1.483" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="1.483" x2="2.473" y2="-1.483" width="0.0508" layer="39"/>
+<wire x1="1.143" y1="0.8382" x2="-1.143" y2="0.8382" width="0.1524" layer="51"/>
+<wire x1="1.143" y1="-0.8382" x2="-1.143" y2="-0.8382" width="0.1524" layer="51"/>
+<smd name="1" x="-1.4" y="0" dx="1.6" dy="2" layer="1"/>
+<smd name="2" x="1.4" y="0" dx="1.6" dy="2" layer="1"/>
+<text x="-1.27" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.27" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.7018" y1="-0.9144" x2="-1.1176" y2="0.9144" layer="51"/>
+<rectangle x1="1.1176" y1="-0.9144" x2="1.7018" y2="0.9144" layer="51"/>
+<rectangle x1="-0.3" y1="-0.8001" x2="0.3" y2="0.8001" layer="35"/>
+<wire x1="-2.54" y1="1.651" x2="-2.413" y2="1.651" width="0.127" layer="21"/>
+<wire x1="-2.413" y1="1.651" x2="2.667" y2="1.651" width="0.127" layer="21"/>
+<wire x1="2.667" y1="1.651" x2="2.667" y2="-1.651" width="0.127" layer="21"/>
+<wire x1="2.667" y1="-1.651" x2="-2.667" y2="-1.651" width="0.127" layer="21"/>
+<wire x1="-2.667" y1="-1.651" x2="-2.667" y2="1.651" width="0.127" layer="21"/>
+<wire x1="-2.667" y1="1.651" x2="-2.54" y2="1.651" width="0.127" layer="21"/>
+<wire x1="2.54" y1="1.524" x2="2.54" y2="-1.524" width="0.127" layer="41"/>
+<wire x1="-0.635" y1="0.889" x2="0.635" y2="0.889" width="0.127" layer="41"/>
+<wire x1="0.635" y1="0.889" x2="0.635" y2="-0.889" width="0.127" layer="41"/>
+<wire x1="0.635" y1="-0.889" x2="-0.635" y2="-0.889" width="0.127" layer="41"/>
+<wire x1="-0.635" y1="-0.889" x2="-0.635" y2="0.889" width="0.127" layer="41"/>
+</package>
 </packages>
 <symbols>
 <symbol name="MCP7941X">
@@ -3329,6 +3406,21 @@ Panasonic # ECQ-E2224KF, Digi-Key #EF2224-ND, Mouser #667-ECQ-E2224KF</descripti
 <technology name=""/>
 </technologies>
 </device>
+<device name="MSOP8" package="MSOP8">
+<connects>
+<connect gate="G$1" pin="MFP" pad="7"/>
+<connect gate="G$1" pin="SCL" pad="6"/>
+<connect gate="G$1" pin="SDA" pad="5"/>
+<connect gate="G$1" pin="VBAT" pad="3"/>
+<connect gate="G$1" pin="VCC" pad="8"/>
+<connect gate="G$1" pin="VSS" pad="4"/>
+<connect gate="G$1" pin="X1" pad="1"/>
+<connect gate="G$1" pin="X2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="CRYSTAL-CITIZEN-CM2XXC" prefix="Y" uservalue="yes">
@@ -3373,6 +3465,15 @@ Panasonic # ECQ-E2224KF, Digi-Key #EF2224-ND, Mouser #667-ECQ-E2224KF</descripti
 </technologies>
 </device>
 <device name="SOD-323F" package="SOD-323F">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="K" pad="K"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SOD-323F-A" package="SOD-323F-A">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="K" pad="K"/>
@@ -4738,6 +4839,15 @@ Panasonic # ECQ-E2224KF, Digi-Key #EF2224-ND, Mouser #667-ECQ-E2224KF</descripti
 </technologies>
 </device>
 <device name="M0805" package="M0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="M1206" package="M1206">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -31544,7 +31654,7 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <part name="JP2" library="SparkFun" deviceset="M04" device="LOCK"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
-<part name="D1" library="_jc" deviceset="DIODE" device="SOD-323F" value="PMEG6002EJ"/>
+<part name="D1" library="_jc" deviceset="DIODE" device="SOD-323F-A" value="PMEG6002EJ"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="Y1" library="_jc" deviceset="CRYSTAL-CITIZEN-CM2XXC" device="" value="32.768 kHz"/>
 <part name="B1" library="_jc" deviceset="COIN-CELL" device="-2016-SMT" value="CR2016"/>
@@ -31553,16 +31663,21 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <sheets>
 <sheet>
 <plain>
-<text x="10.16" y="15.24" size="2.1844" layer="91" ratio="10">MCP79412 Breakout Board by Jack Christensen is licensed under</text>
-<text x="10.16" y="20.32" size="4.572" layer="91" ratio="12">CC BY-SA</text>
-<text x="10.16" y="10.16" size="2.1844" layer="91" ratio="10">a Creative Commons Attribution-ShareAlike 3.0 Unported License.</text>
+<text x="10.16" y="10.16" size="2.1844" layer="91" ratio="10">MCP79412 Breakout Board by Jack Christensen is licensed under
+the Creative Commons Attribution-ShareAlike 4.0 International License,
+https://creativecommons.org/licenses/by-sa/4.0/</text>
+<text x="10.16" y="20.32" size="4.572" layer="91" ratio="12">CC BY-SA 4.0</text>
 <text x="149.86" y="30.48" size="3.048" layer="91" ratio="12">MCP79412 Breakout Board</text>
 <text x="149.86" y="25.4" size="3.048" layer="91" ratio="12">Jack Christensen</text>
 <text x="236.22" y="7.62" size="3.048" layer="91" ratio="12">v1.2</text>
 </plain>
 <instances>
-<instance part="FRAME1" gate="G$1" x="0" y="0"/>
-<instance part="FRAME1" gate="G$2" x="147.32" y="0"/>
+<instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
+<instance part="FRAME1" gate="G$2" x="147.32" y="0" smashed="yes">
+<attribute name="LAST_DATE_TIME" x="160.02" y="1.27" size="2.54" layer="94" font="vector"/>
+<attribute name="SHEET" x="233.68" y="1.27" size="2.54" layer="94" font="vector"/>
+<attribute name="DRAWING_NAME" x="165.1" y="19.05" size="2.54" layer="94" font="vector"/>
+</instance>
 <instance part="U1" gate="G$1" x="116.84" y="93.98" smashed="yes">
 <attribute name="NAME" x="109.22" y="104.902" size="1.27" layer="94"/>
 <attribute name="VALUE" x="116.84" y="104.902" size="1.27" layer="94"/>
@@ -31639,8 +31754,11 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <attribute name="NAME" x="86.36" y="111.76" size="1.778" layer="95"/>
 <attribute name="VALUE" x="93.98" y="111.76" size="1.778" layer="96"/>
 </instance>
-<instance part="B1" gate="G$1" x="66.04" y="73.66"/>
-<instance part="LOGO2" gate="G$1" x="50.8" y="22.86"/>
+<instance part="B1" gate="G$1" x="66.04" y="73.66" smashed="yes">
+<attribute name="NAME" x="68.58" y="78.74" size="1.778" layer="95"/>
+<attribute name="VALUE" x="68.58" y="68.58" size="1.778" layer="96"/>
+</instance>
+<instance part="LOGO2" gate="G$1" x="66.04" y="22.86" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -31830,10 +31948,16 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 </sheet>
 </sheets>
 <errors>
-<approved hash="115,1,124.356,92.606,FRAME1,,,,,"/>
-<approved hash="115,1,139.023,66.2347,JP1,,,,,"/>
-<approved hash="115,1,166.963,66.2347,JP2,,,,,"/>
+<approved hash="113,1,124.356,92.606,FRAME1,,,,,"/>
+<approved hash="113,1,139.023,66.2347,JP1,,,,,"/>
+<approved hash="113,1,166.963,66.2347,JP2,,,,,"/>
 </errors>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
